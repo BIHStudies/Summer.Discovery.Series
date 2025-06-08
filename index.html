@@ -138,6 +138,36 @@
       font-style: italic;
       color: #f1f1f1;
     }
+      .themes-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .theme-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 220px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .theme-box img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .theme-box h4 {
+      color: #003f7d;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+    .theme-box p {
+      font-size: 0.95em;
+      line-height: 1.4em;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -167,12 +197,28 @@
       The event features <strong>19 distinguished speakers</strong> exploring the ethical, philosophical, and metaphysical frontiers of science.
     </p>
     <p><strong>The talks are organized around four core themes:</strong></p>
-    <ul>
-      <li>🧭 <strong>Ethics & Epistemology</strong> – exploring virtue, animal ethics, and plural ways of knowing</li>
-      <li>🧠 <strong>Philosophy of Science</strong> – questioning the foundations and limits of modern inquiry</li>
-      <li>🔬 <strong>New Scientific Frameworks</strong> – presenting emerging paradigms of wholeness and reality</li>
-      <li>🌿 <strong>Biology & Consciousness</strong> – uncovering nature’s intelligence and inner sentience</li>
-    </ul>
+<div class="themes-grid">
+  <div class="theme-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Ethics Icon">
+    <h4>Ethics & Epistemology</h4>
+    <p>Exploring virtue, animal ethics, and plural ways of knowing</p>
+  </div>
+  <div class="theme-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/287/287221.png" alt="Philosophy Icon">
+    <h4>Philosophy of Science</h4>
+    <p>Questioning the foundations and limits of modern inquiry</p>
+  </div>
+  <div class="theme-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/2942/2942927.png" alt="Microscope Icon">
+    <h4>New Scientific Frameworks</h4>
+    <p>Presenting emerging paradigms of wholeness and reality</p>
+  </div>
+  <div class="theme-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909590.png" alt="Biology Icon">
+    <h4>Biology & Consciousness</h4>
+    <p>Uncovering nature’s intelligence and inner sentience</p>
+  </div>
+</div>
   </div>
 </section>
 
