@@ -120,8 +120,38 @@
   </style>
 
   <style>
+    
   /* Existing styles above */
+.theme-header {
+  text-align: center;
+  margin-top: 40px;
+}
 
+.theme-header h2,
+.theme-header h3 {
+  color: #003f7d;
+  margin: 0.4em 0;
+}
+
+.event-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.event-description ul {
+  margin-top: 20px;
+  padding-left: 1.2em;
+  list-style: none;
+}
+
+.event-description ul li::before {
+  content: "• ";
+  color: #003f7d;
+  font-weight: bold;
+}
   #schedule {
     background-color: #002855;
     color: white;
@@ -176,28 +206,29 @@
 
 
     <section id="about">
-      <p>
-        <h2>Contemporary Science & Timeless Wisdom </h2>
-    
-      
-<h2>Philosophy, Science & Consciousness in Dialogue </h2>
+  <div class="theme-header">
+    <h2>Contemporary Science & Timeless Wisdom</h2>
+    <h3>Philosophy, Science & Consciousness in Dialogue</h3>
+  </div>
 
-<p>
-  This summer, the Bhaktivedanta Institute for Higher Studies (BIHS) presents the Summer Discovery Series — a free, three-weekend online event: July 12–13, July 19–20, and July 26–27.
-</p>
-<p>
-  The event features 18 distinguished speakers exploring the ethical, philosophical, and metaphysical frontiers of science.
-</p>
-<p>The talks are organized around four core themes: </p>
-<ul>
-  <li> ⁠🧭 Ethics & Epistemology – exploring virtue, animal ethics, and plural ways of knowing </li>
-<li> ⁠🧠 Philosophy of Science – questioning the foundations and limits of modern inquiry </li>
-<li> ⁠🔬 New Scientific Frameworks – presenting emerging paradigms of wholeness and reality </li>
-<li>  ⁠🌿 Biology & Consciousness – uncovering nature’s intelligence and inner sentience </li>
+  <div class="event-description">
+    <p>
+      This summer, the Bhaktivedanta Institute for Higher Studies (BIHS) presents the Summer Discovery Series —
+      a free, three-weekend online event: <strong>July 12–13</strong>, <strong>July 19–20</strong>, and <strong>July 26–27</strong>.
+    </p>
+    <p>
+      The event features <strong>18 distinguished speakers</strong> exploring the ethical, philosophical, and metaphysical frontiers of science.
+    </p>
+    <p>The talks are organized around four core themes:</p>
+    <ul>
+      <li>🧭 <strong>Ethics & Epistemology</strong> – exploring virtue, animal ethics, and plural ways of knowing</li>
+      <li>🧠 <strong>Philosophy of Science</strong> – questioning the foundations and limits of modern inquiry</li>
+      <li>🔬 <strong>New Scientific Frameworks</strong> – presenting emerging paradigms of wholeness and reality</li>
+      <li>🌿 <strong>Biology & Consciousness</strong> – uncovering nature’s intelligence and inner sentience</li>
     </ul>
-      </p>
-    </section>
-    <section id="speakers">
+  </div>
+</section>
+  <section id="speakers">
       <h2>Meet the Speakers</h2>
       <div class="speaker-grid">
         <!-- Speaker Card x18 -->
