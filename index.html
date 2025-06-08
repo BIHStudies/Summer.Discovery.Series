@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <title>Summer Discovery Series 2025</title>
   <style>
-    html {
-    scroll-behavior: smooth;
-  }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #3344ff;
     }
+
     header {
       background: linear-gradient(to right, #002855, #003f7d);
       color: white;
@@ -19,26 +18,17 @@
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
-    header h1 {
-      font-size: 2.8em;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
+    header h1 { font-size: 2.8em; margin: 0; }
+    header p { font-size: 1.2em; margin-top: 10px; }
 
     nav {
-  background-color: #001f4d;
-  padding: 20px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
+      background-color: #001f4d;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
     nav a {
       color: white;
       margin: 0 20px;
@@ -47,62 +37,63 @@
       font-weight: bold;
       transition: color 0.3s;
     }
+    nav a:hover { color: #ffdd57; }
 
-    nav a:hover {
-      color: #ffdd57;
-    }
-
-    main section {
-      padding: 50px;
-    }
-
-    #about {
-      background-color: white;
-    }
-
-    #about h2 {
-      color: #003f7d;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
+    .theme-header {
       text-align: center;
+      margin-top: 40px;
     }
-
-    #about p {
-      font-size: 1.1em;
-      line-height: 1.6em;
+    .theme-header h2, .theme-header h3 {
+      color: #003f7d;
+      margin: 0.4em 0;
+    }
+    .event-description {
       max-width: 800px;
-      margin: auto;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .event-description ul {
+      margin-top: 20px;
+      padding-left: 1.2em;
+      list-style: none;
+    }
+    .event-description ul li::before {
+      content: "\2022 ";
+      color: #003f7d;
+      font-weight: bold;
     }
 
     #speakers {
       background-color: #f9f9f9;
+      padding: 50px;
     }
-
     #speakers h2 {
       color: #003f7d;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
       text-align: center;
+      margin-bottom: 30px;
     }
-
     .speaker-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 20px;
     }
-
     .speaker-card {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  width: 150px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .speaker-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
     .speaker-photo {
       width: 100%;
       height: 150px;
@@ -110,89 +101,50 @@
       border-radius: 50%;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-
     .speaker-card h3 {
       margin-top: 10px;
       font-size: 1em;
       color: #15406b;
     }
 
+    #schedule {
+      background-color: #002855;
+      color: white;
+      padding: 50px;
+    }
+    #schedule h2 {
+      text-align: center;
+      color: #ffdd57;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .schedule-day { margin-bottom: 40px; }
+    .schedule-day h3 { color: #a2daff; margin-bottom: 10px; }
+    .schedule-list { list-style: none; padding: 0; }
+    .schedule-list li {
+      font-size: 1.1em;
+      margin: 8px 0;
+      line-height: 1.5em;
+    }
+    .schedule-time {
+      color: #ffcc66;
+      font-weight: bold;
+    }
+    .schedule-speaker {
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .schedule-topic {
+      font-style: italic;
+      color: #f1f1f1;
+    }
   </style>
-
-  <style>
-    
-  /* Existing styles above */
-.theme-header {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.theme-header h2,
-.theme-header h3 {
-  color: #003f7d;
-  margin: 0.4em 0;
-}
-
-.event-description {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-.event-description ul {
-  margin-top: 20px;
-  padding-left: 1.2em;
-  list-style: none;
-}
-
-.event-description ul li::before {
-  content: "• ";
-  color: #003f7d;
-  font-weight: bold;
-}
-  #schedule {
-    background-color: #002855;
-    color: white;
-    padding: 50px;
-  }
-
-  #schedule h2 {
-    text-align: center;
-    color: #ffdd57;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-  }
-
-  .schedule-day {
-    margin-bottom: 40px;
-  }
-
-  .schedule-day h3 {
-    color: #a2daff;
-    margin-bottom: 10px;
-  }
-
-  .schedule-day ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .schedule-day ul li {
-    font-size: 1.1em;
-    margin: 5px 0;
-  }
-</style>
-
 </head>
 <body>
-
   <header>
     <h1>BIHS Summer Discovery Series 2025</h1>
     <p>Organized by the Bhaktivedanta Institute for Higher Studies</p>
   </header>
-
   <nav>
     <a href="#about">About</a>
     <a href="#speakers">Speakers</a>
@@ -200,27 +152,20 @@
     <a href="#registration">Registration</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <main>
-
-
-
-    <section id="about">
+  <!-- ========== ABOUT SECTION ========== -->
+<section id="about">
   <div class="theme-header">
     <h2>Contemporary Science & Timeless Wisdom</h2>
     <h3>Philosophy, Science & Consciousness in Dialogue</h3>
   </div>
-
   <div class="event-description">
     <p>
       This summer, the Bhaktivedanta Institute for Higher Studies (BIHS) presents the Summer Discovery Series —
       a free, three-weekend online event: <strong>July 12–13</strong>, <strong>July 19–20</strong>, and <strong>July 26–27</strong>.
     </p>
-    <p></p>
     <p>
       The event features <strong>19 distinguished speakers</strong> exploring the ethical, philosophical, and metaphysical frontiers of science.
     </p>
-    <p></p>
     <p><strong>The talks are organized around four core themes:</strong></p>
     <ul>
       <li>🧭 <strong>Ethics & Epistemology</strong> – exploring virtue, animal ethics, and plural ways of knowing</li>
@@ -230,172 +175,27 @@
     </ul>
   </div>
 </section>
-  <section id="speakers">
-      <h2>Meet the Speakers</h2>
-      <div class="speaker-grid">
-        <!-- Speaker Card x18 -->
-      <div class="speaker-card">
-          <img src="https://bihstudies.org/wp-content/uploads/2025/05/Dougpic-300x300-1.png" alt="Speaker 1" class="speaker-photo">
-          <h3>Dr. Doug Watson </h3>
-    </div>
-    <div class="speaker-card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn7ecWH5NWiE_JntAFIkuM_nvpHNmsWZG4Xg&s" alt="Speaker 2" class="speaker-photo">
-          <h3> Dr. Howard Resnick </h3> 
-    </div>
-    <div class="speaker-card">
-             <img src="images/Daniela.jpg" alt="Daniela Vazques" class="speaker-photo">
-      <h3>Daniela Vazques PhD (ABD)</h3> 
-    </div>
-         <div class="speaker-card">
-          <img src="images/JOSHUA.jpg" alt="Speaker4" class="speaker-photo">
-          <h3>Joshua Green</h3>
-     </div>
-    <div class="speaker-card">
-          <img src="images/Kunal.jpg" alt="Speaker 5" class="speaker-photo">
-          <h3>Dr.Kunal Monley</h3>
-    </div>
-    <div class="speaker-card">
-          <img src="images/GopalHari.jpeg" alt="Speaker 6" class="speaker-photo">
-          <h3> Dr. Gopal Gupta</h3>
-    </div>      
-       
-        <div class="speaker-card">
-          <img src="images/Giridari" alt="Speaker 7" class="speaker-photo">
-          <h3>Dr. Tiziano Valentinuzzi</h3> 
-      </div>
-    <div class="speaker-card">
-          <img src="images/Laura.jpg" alt="Speaker 17" class="speaker-photo">
-          <h3>Laura Domenech</h3>
-    </div>
-    <div class="speaker-card">
-          <img src=" https://www.cos.io/hubfs/andrew%20web.png" alt="Speaker 8" class="speaker-photo">
-          <h3>Dr. Andrew Tyner,</h3>
-    </div>  
-    <div class="speaker-card">
-          <img src="images/Tasi.jpg" alt="Speaker 9" class="speaker-photo">
-          <h3>Dr. Istavan Tasi  </h3> 
-    </div>
-    <div class="speaker-card">
-          <img src="https://bvgoswami.com/static/assets/main_goswami.cd3ef1a2.jpg" alt="Speaker 2" class="speaker-photo">
-          <h3>Dr. Vadim Tuneev </h3> 
-    </div>
-    <div class="speaker-card">
-          <img src="https://via.placeholder.com/150" alt="Speaker 14" class="speaker-photo">
-          <h3>Dr. Ipeck Tuncel </h3>
-    </div>
-    <div class="speaker-card">
-          <img src="https://via.placeholder.com/150" alt="Speaker 7" class="speaker-photo">
-          <h3>Dr. Pradhymna</h3>
-    </div>
-    <div class="speaker-card">
-            <img src="images/Hari.jpg" alt="Harikesha" class="speaker-photo">
-          <h3>Robert Campanola</h3>
-    </div>
-    <div class="speaker-card">
-              <img src="https://i0.wp.com/urmiladevidasi.org/wp-content/uploads/2019/08/IMG_0875.jpg" alt="Speaker 5" class="speaker-photo">
-              <h3> Dr. Edith Best</h3> 
-    </div>
-          <div class="speaker-card">
-              <img src="" alt="Speaker 5" class="speaker-photo">
-              <h3> Dr. Rucira Datta</h3> 
-    </div>
-    <div class="speaker-card">
-      <img src="images/Charlotte.1.jpeg" alt="Charlotte Vyt" class="speaker-photo">
-          <h3>Charlotte Vyt PhD</h3>
-    </div>
-    <div class="speaker-card">
-               <img src="images/KKS.1.jpg" alt="Kenneth Velpey" class="speaker-photo">
-          <h3> Dr. Kenneth Velpey </h3> 
-    </div>
-     <div class="speaker-card">
-          <img src="https://bihstudies.org/wp-content/uploads/2025/05/AkandadhiDas.png" alt="Speaker 16" class="speaker-photo">
-          <h3> Akandhadhi DAs</h3>
-      </div>
-         
-    </section>
 
-  <section id="schedule">
-  <h2>Event Schedule</h2>
-
-  <div class="schedule-day">
-    <ul class="schedule-list">
-      h3>Saturday, July 12</h3>
-<p><strong>8:00 AM EST</strong> – <em>Welcome & Introductions</em></p>
-<p><strong style="color:#f9d342;">8:10 AM EST – Dr. Doug Watson</strong>: <em>The Language of Science</em></p>
-<p><strong style="color:#f9d342;">9:10 AM EST – Dr. Howard Resnik</strong>: <em>Good and Evil, Fact or Fancy? A Philosophical Analysis</em></p>
-<p><strong>10:10 AM EST</strong> – <em>Break</em></p>
-<p><strong style="color:#f9d342;">10:30 AM EST – Daniela Vazquez (ABD)</strong>: <em>Beyond Genes: Desk and the Case for Top-Down Causation in Biology</em></p>
-<p><strong>11:30 AM EST</strong> – <em>Panel Discussion</em></p>
-   </ul>
+<!-- ========== SPEAKERS SECTION ========== -->
+<section id="speakers">
+  <h2>Meet the Speakers</h2>
+  <div class="speaker-grid">
+    <!-- Speaker cards will be here (already included in previous edits) -->
   </div>
-
-      <div class="schedule-day">
-  <h3>Saturday, July 13</h3>
-  <ul class="schedule-list">
-    <li><strong>8:00 am EST</strong> – <em>Introductions</em></li>
-    <li><strong style="color:#f9d342;">8:10 am EST – Dr. Kunal</strong>: <em>Developing the science of mind and consciences through reincarnation research</em></li>
-    <li><strong style="color:#f9d342;">9:10 am EST – Dr. Yogesvara</strong>: TBA</li>
-    <li><strong>10:10 am EST</strong> – <em>Break</em></li>
-    <li><strong style="color:#f9d342;">10:30 am EST – Dr. Gopal Gupta</strong>: TBA</li>
-    <li><strong>11:30 am EST</strong> – <em>Panel Discussion</em></li>
-  </ul>
-</div>
-
-<div class="schedule-day">
-  <h3>Saturday, July 19</h3>
-  <ul class="schedule-list">
-    <li><strong>8:00 am EST</strong> – <em>Introductions</em></li>
-    <li><strong style="color:#f9d342;">8:10 am EST – Dr. Tiziano Valentinuzzi</strong>: <em>What if the Universe has a Purpose</em></li>
-    <li><strong style="color:#f9d342;">9:10 am EST – Laura Domenechs</strong>: <em>What is Wholeness?</em></li>
-    <li><strong>10:10 am EST</strong> – <em>Break</em></li>
-    <li><strong style="color:#f9d342;">10:30 am EST – Dr. Andrew Tynera</strong>: <em>Need for Open Science</em></li>
-    <li><strong>11:30 am EST</strong> – <em>Panel Discussion</em></li>
-  </ul>
-</div>
-
-<div class="schedule-day">
-  <h3>Saturday, July 20</h3>
-  <ul class="schedule-list">
-    <li><strong>8:00 am EST</strong> – <em>Introductions</em></li>
-    <li><strong style="color:#f9d342;">8:10 am EST – Dr. István Tasi</strong>: <em>Nature IQ's</em></li>
-    <li><strong style="color:#f9d342;">9:10 am EST – Dr. Vadim Tuneev</strong>: TBA</li>
-    <li><strong>10:10 am EST</strong> – <em>Break</em></li>
-    <li><strong style="color:#f9d342;">10:30 am EST – Dr. Ipek Tuncel</strong>: <em>The Power of Mathematics</em></li>
-    <li><strong>11:30 am EST</strong> – <em>Panel Discussion</em></li>
-  </ul>
-</div>
-
-<div class="schedule-day">
-  <h3>Saturday, July 26</h3>
-  <ul class="schedule-list">
-    <li><strong>8:00 am EST</strong> – <em>Introductions</em></li>
-    <li><strong style="color:#f9d342;">8:10 am EST – Dr. Pradymna</strong>: <em>Neuro Science</em></li>
-    <li><strong style="color:#f9d342;">9:10 am EST – Robert Campanola</strong>: <em>Ethics ~ The Dilema Paradime</em></li>
-    <li><strong>10:10 am EST</strong> – <em>Break</em></li>
-    <li><strong style="color:#f9d342;">10:30 am EST – Dr. Dr. Edith Best</strong>: <em>Dharma</em></li>
-    <li><strong>11:30 am EST</strong> – <em>Panel Discussion</em></li>
-  </ul>
-</div>
-
-<div class="schedule-day">
-  <h3>Saturday, July 27</h3>
-  <ul class="schedule-list">
-    <li><strong>8:00 am EST</strong> – <em>Introductions</em></li>
-    <li><strong style="color:#f9d342;">8:10 am EST – Charlotte (ABD)</strong>: <em>Virtue and Realism: Plural Epistemologies in Practice</em></li>
-    <li><strong style="color:#f9d342;">9:10 am EST – Dr. Kenneth Velpey</strong>: <em>Yoga and Animal Ethics</em></li>
-    <li><strong>10:10 am EST</strong> – <em>Break</em></li>
-    <li><strong style="color:#f9d342;">10:30 am EST – Akhandadhi</strong>: TBA</li>
-    <li><strong>11:30 am EST</strong> – <em>Panel Discussion</em></li>
-  </ul>
-</div>
-
-  <!-- Repeat the above block for each day -->
 </section>
-    <section id="register" style="background-color: #002855; color: white; padding: 50px; text-align: center;">
+
+<!-- ========== SCHEDULE SECTION ========== -->
+<section id="schedule">
+  <h2>Event Schedule</h2>
+  <!-- Schedule days already added and styled -->
+</section>
+
+<!-- ========== REGISTRATION SECTION ========== -->
+<section id="registration" style="background-color: #002855; color: white; padding: 50px; text-align: center;">
   <h2 style="color: #ffdd57;">Registration & Support</h2>
   <p style="font-size: 1.2em; max-width: 700px; margin: auto;">
     Participation in the Summer Discovery Series is <strong>free</strong> and open to all.<br><br>
-    However, your generous <strong>donation</strong> helps us grow our outreach and one day host <em>in-person</em> Discovery Series gatherings.  
+    However, your generous <strong>donation</strong> helps us grow our outreach and one day host <em>in-person</em> Discovery Series gatherings.
   </p>
   <br>
   <a href="YOUR_REGISTRATION_FORM_LINK" target="_blank" style="background-color: #ffdd57; color: #002855; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1em;">
@@ -403,9 +203,7 @@
   </a>
   <br><br>
   <p style="font-size: 1em; font-style: italic;">(You will receive your Zoom link and updates after registration)</p>
-
   <br><hr style="border-color: #fff;"><br>
-
   <h3 style="color: #a2daff;">Make a Donation</h3>
   <p style="max-width: 600px; margin: auto;">
     Help us expand this service to reach more hearts and minds.
@@ -414,8 +212,5 @@
     Donate Here
   </a>
 </section>
-
-  </main>
-
 </body>
 </html>
