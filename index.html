@@ -328,6 +328,20 @@
       <h3>Akandadhi Das</h3>
     </div>
   </div>
+
+  <!-- Bio Popups -->
+<div id="daniela-bio" class="bio-popup" onclick="closeBio(this)">
+  <img src="images/Daniela-bio.jpg" alt="Daniela Bio">
+</div>
+
+<div id="giridhari-bio" class="bio-popup" onclick="closeBio(this)">
+  <img src="images/Giridari-bio.jpg" alt="Giridhari Bio">
+</div>
+
+<div id="yogesvara-bio" class="bio-popup" onclick="closeBio(this)">
+  <img src="images/Yogesvara-bio.jpg" alt="Yogesvara Bio">
+</div>
+
 </section>
 
 <!-- ========== SCHEDULE SECTION ========== -->
@@ -445,6 +459,13 @@
 
    
 </footer>
-
+<script>
+  function openBio(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+  function closeBio(el) {
+    el.style.display = 'none';
+  }
+</script>
 </body>
 </html>
