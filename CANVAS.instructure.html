@@ -38,10 +38,16 @@
             margin-bottom: 20px;
             border-radius: 8px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
         }
         .instruction-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .instruction-card img {
+            max-width: 120px;
+            margin-right: 20px;
         }
         h2 {
             color: #003f7d;
@@ -72,6 +78,16 @@
         .button:hover {
             background-color: #0056b3;
         }
+        .explanation {
+            background-color: #e0f7fa;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #b2ebf2;
+        }
+        .explanation h3 {
+            color: #00796b;
+        }
     </style>
 </head>
 <body>
@@ -82,55 +98,45 @@
 </header>
 
 <section>
+    <!-- Explanation about Canvas Instructure -->
+    <div class="explanation">
+        <h3>Accessing Videos for the Summer Discovery Series</h3>
+        <p>Videos for the Summer Discovery Series and the Conceptual Study of Srimad Bhagavatam are hosted on Canvas Instructure, a free and secure platform. To ensure a more interactive and academic experience, we use Canvas to keep the conversation going and strengthen networking within an academic setting.</p>
+    </div>
+
     <h2>Welcome to the Canvas Guide</h2>
     <p>This guide will walk you through logging in to Canvas, creating accounts, and adding the Summer Discovery Series and Conceptual Study of Srimad Bhagavatam courses.</p>
 
     <div class="instructions">
-        <!-- Instruction 1: Log In -->
+        <!-- Instruction 1: Log In with Image -->
         <div class="instruction-card">
-            <h2>1. Log in to Canvas</h2>
-            <p>If you already have a Canvas account, simply log in with your email and password.</p>
-            <ul>
-                <li>Enter your email and password.</li>
-                <li>Click "Log in" to access your dashboard.</li>
-            </ul>
-            <a href="https://canvas.instructure.com/login" class="button">Log in to Canvas</a>
+            <img src="your-image-url.jpg" alt="Log in to Canvas Image"> <!-- Replace with your image URL -->
+            <div>
+                <h2>1. Log in to Canvas</h2>
+                <p>If you already have a Canvas account, simply log in with your email and password.</p>
+                <ul>
+                    <li>Enter your email and password.</li>
+                    <li>Click "Log in" to access your dashboard.</li>
+                </ul>
+                <a href="https://canvas.instructure.com/login" class="button">Log in to Canvas</a>
+            </div>
         </div>
 
-        <!-- Instruction 2: Create a Free Student Account -->
+        <!-- Instruction 2: Create a Free Student Account (you can follow the same structure for this and the others) -->
         <div class="instruction-card">
-            <h2>2. Create a Free Student Account</h2>
-            <p>If you're new to Canvas, you'll need to create a free student account.</p>
-            <ul>
-                <li>Click the link below to sign up for a free account.</li>
-                <li>Complete your registration and you'll be able to access your BIHS courses.</li>
-            </ul>
-            <a href="https://canvas.instructure.com/register" class="button">Create Account</a>
+            <img src="your-image-url.jpg" alt="Create Student Account Image"> <!-- Replace with your image URL -->
+            <div>
+                <h2>2. Create a Free Student Account</h2>
+                <p>If you're new to Canvas, you'll need to create a free student account.</p>
+                <ul>
+                    <li>Click the link below to sign up for a free account.</li>
+                    <li>Complete your registration and you'll be able to access your BIHS courses.</li>
+                </ul>
+                <a href="https://canvas.instructure.com/register" class="button">Create Account</a>
+            </div>
         </div>
 
-        <!-- Instruction 3: Add Summer Discovery Series to Srimad Bhagavatam -->
-        <div class="instruction-card">
-            <h2>3. Add the Summer Discovery Series to Srimad Bhagavatam</h2>
-            <p>If you're already enrolled in the Conceptual Study of Srimad Bhagavatam, you can add the Summer Discovery Series to your dashboard.</p>
-            <ul>
-                <li>Log in to Canvas and go to your dashboard.</li>
-                <li>Use the link below to add the Summer Discovery Series to your course list.</li>
-            </ul>
-            <a href="your-link-here" class="button">Add Summer Discovery Series</a>
-        </div>
-
-        <!-- Instruction 4: Add Srimad Bhagavatam to Discovery Series -->
-        <div class="instruction-card">
-            <h2>4. Add the Conceptual Study of Srimad Bhagavatam to the Discovery Series</h2>
-            <p>If you're enrolled in the Summer Discovery Series and want to add the Srimad Bhagavatam course, follow the steps below.</p>
-            <ul>
-                <li>Log in to Canvas and open the Discovery Series course.</li>
-                <li>Click the link below to add Srimad Bhagavatam to your list of courses.</li>
-            </ul>
-            <a href="your-link-here" class="button">Add Srimad Bhagavatam</a>
-        </div>
     </div>
-
 </section>
 
 </body>
