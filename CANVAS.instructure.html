@@ -88,6 +88,56 @@
         .explanation h3 {
             color: #00796b;
         }
+
+        /* New Section: Options Explanation */
+.intro-options {
+    background-color: #e0f7fa; /* Subtle background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro-options h2 {
+    color: #00796b;
+}
+
+.intro-options p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Make sure the images are responsive */
+.instruction-card img {
+    width: 100%; /* Ensures the image is more flexible */
+    height: auto;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .intro-options p {
+        font-size: 16px;  /* Larger text for mobile */
+    }
+
+    .instruction-card {
+        width: 100%;  /* Ensure the cards take full width on smaller screens */
+        flex-direction: column; /* Stack the image and text vertically */
+        margin-bottom: 20px;
+    }
+
+    .instruction-card img {
+        margin-right: 0;
+        margin-bottom: 15px; /* Space between the image and text */
+        max-width: 100%;  /* Ensure images are properly responsive */
+    }
+
+    .intro-options {
+        margin-bottom: 15px; /* Adjusting the spacing for mobile */
+    }
+}
+
     </style>
 </head>
 <body>
