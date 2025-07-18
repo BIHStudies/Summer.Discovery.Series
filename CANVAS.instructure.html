@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Canvas Instructions - BIHS</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-       header {
+        /* ===== Global Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
   background-color: #003f7d;
   color: white;
-  text-align: center;  /* Default: center for mobile */
+  text-align: center;
   padding: 20px;
 }
 
@@ -24,170 +26,162 @@ header h1 {
   margin: 0;
 }
 
-section {
+/* ===== Content Container ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-/* Desktop-specific adjustments */
-@media (min-width: 768px) {
-  header {
-    text-align: left;
-    padding: 20px 40px;
-  }
+h2 {
+  color: #003f7d;
+  margin-top: 0;
 }
 
-        .instructions {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .instruction-card {
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 48%;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            align-items: center;
-        }
-        .instruction-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-        .instruction-card img {
-            max-width: 120px;
-            margin-right: 20px;
-        }
-        h2 {
-            color: #003f7d;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            padding-left: 1em;
-            position: relative;
-        }
-        ul li:before {
-            content: none;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .button {
-            background-color: #003f7d;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .explanation {
-            background-color: #e0f7fa;
-            padding: 15px;
-            margin-top: 30px;
-            border-radius: 8px;
-            border: 1px solid #b2ebf2;
-        }
-        .explanation h3 {
-            color: #00796b;
-        }
-
-        /* New Section: Options Explanation */
-.intro-options {
-    background-color: #e0f7fa; /* Subtle background */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
+p {
+  line-height: 1.6;
 }
 
-.intro-options h2 {
-    color: #00796b;
+ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-top: 10px;
 }
 
-.intro-options p {
-    font-size: 18px;
-    line-height: 1.5;
+ul li {
+  margin-bottom: 8px;
 }
 
-/* Make sure the images are responsive */
+/* ===== Instruction Cards ===== */
+.instructions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.instruction-card {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 48%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.instruction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
 .instruction-card img {
-    width: 100%; /* Ensures the image is more flexible */
-    height: auto;
-    object-fit: contain;
-    margin-right: 20px;
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 20px;
+  border-radius: 6px;
 }
 
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-    .intro-options p {
-        font-size: 16px;  /* Larger text for mobile */
-    }
+/* ===== Buttons ===== */
+.button {
+  background-color: #003f7d;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
 
-    .instruction-card {
-        width: 100%;  /* Ensure the cards take full width on smaller screens */
-        flex-direction: column; /* Stack the image and text vertically */
-        margin-bottom: 20px;
-    }
+.button:hover {
+  background-color: #0056b3;
+}
 
-    .instruction-card img {
-        margin-right: 0;
-        margin-bottom: 15px; /* Space between the image and text */
-        max-width: 100%;  /* Ensure images are properly responsive */
-    }
+/* ===== Explanation Box ===== */
+.explanation {
+  background-color: #e0f7fa;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 8px;
+  border: 1px solid #b2ebf2;
+}
 
-    .intro-options {
-        margin-bottom: 15px; /* Adjusting the spacing for mobile */
-    }
+.explanation h3 {
+  color: #00796b;
+}
 
-        /* New Section: Introductory Directions */
+/* ===== Introductory Option Box ===== */
 .intro-options {
-    background-color: #e0f7fa; /* Subtle background */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .intro-options h2 {
-    color: #00796b;
+  color: #00796b;
+  margin-bottom: 10px;
 }
 
 .intro-options p {
-    font-size: 18px;
-    line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .intro-options ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: disc;
+  padding-left: 1.5em;
+  text-align: left;
 }
 
 .intro-options ul li {
-    font-size: 16px;
-    line-height: 1.6;
-    padding-left: 1.5em;
-    position: relative;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
 }
 
-.intro-options ul li:before {
-    content: "✔️";
-    position: absolute;
-    left: 0;
-    top: 0;
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .instructions {
+    flex-direction: column;
+  }
+
+  .instruction-card {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .instruction-card img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .intro-options p {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
     </style>
-</head>
-<body>
+
+    <body>
 
 <header>
     <h1>Canvas Instructions for BIHS Courses</h1>
