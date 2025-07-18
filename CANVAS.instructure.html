@@ -13,18 +13,29 @@
             padding: 0;
             color: #333;
         }
-        header {
-            background-color: #003f7d;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            padding: 20px;
-        }
+       header {
+  background-color: #003f7d;
+  color: white;
+  text-align: center;  /* Default: center for mobile */
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+    padding: 20px 40px;
+  }
+}
+
         .instructions {
             display: flex;
             flex-wrap: wrap;
@@ -174,7 +185,6 @@
     top: 0;
 }
 
-}
     </style>
 </head>
 <body>
