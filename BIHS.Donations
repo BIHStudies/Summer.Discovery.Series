@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Now</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f9f9f9;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .btn {
+      background-color: #635bff;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #5548d9;
+    }
+    .payment-icons {
+      margin-top: 20px;
+    }
+    .payment-icons img {
+      height: 40px;
+      margin: 0 10px;
+    }
+    .info {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Support Our Mission</h1>
+  <p>Your donation helps us continue our work.</p>
+
+  <a class="btn" href="https://donate.stripe.com/eVqbJ3c4zgE2dFx9czgUM00">
+    Donate Securely
+  </a>
+
+  <div class="payment-icons">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Pay_Logo.svg/512px-Google_Pay_Logo.svg.png" alt="Google Pay">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Apple_Pay_logo.svg/512px-Apple_Pay_logo.svg.png" alt="Apple Pay">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Stripe_Logo%2C_revised_2016.svg/512px-Stripe_Logo%2C_revised_2016.svg.png" alt="Stripe">
+  </div>
+
+  <p class="info">Google Pay and Apple Pay are available at checkout.</p>
+</body>
+</html>
